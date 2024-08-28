@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "Server for local development of portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "node --watch index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EstefanHu/Portfolio.git"
+  },
+  "author": "Estefan Hu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EstefanHu/Portfolio/issues"
+  },
+  "homepage": "https://github.com/EstefanHu/Portfolio#readme"
+}
