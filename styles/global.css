@@ -55,7 +55,8 @@ body {
 
 a,
 button {
-  color: var(--text);
+  color: var(--accent);
+  text-decoration: none;
 }
 
 h1,
