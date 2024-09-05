@@ -3,6 +3,9 @@ main {
   flex-direction: column;
   width: 100vw;
   padding-top: var(--headerHeight);
+  max-width: 800px;
+  padding: var(--headerHeight) 15px 30px;
+  margin: 0 auto;
 }
 
 header {
@@ -27,6 +30,7 @@ header {
   }
 
   .logo {
+    color: var(--text);
     font-size: 1.5rem;
     font-weight: bold;
     transition: color 0.2s;
@@ -64,47 +68,47 @@ footer {
   margin-top: auto;
 
   .footerWrapper {
-      padding: 55px 15px 15px;
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
+    padding: 55px 15px 15px;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
 
-      div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
-        .footerTop {
-          margin-bottom: 40px;
+    .footerTop {
+      margin-bottom: 40px;
 
-          .branding {
-            width: 160px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            margin-right: 50px;
+      .branding {
+        width: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-right: 50px;
 
-            .name {
-              font-weight: bold;
-              margin-bottom: 15px;
-              font-size: 1.3rem;
-              text-transform: capitalize;
-              cursor: pointer;
-              color: #f3f3f3;
-              background-color: var(--accent);
-              padding: 5px 7px;
-              border-radius: 4px;
-              width: 100%;
-            }
-
-            p {
-              cursor: default;
-              margin-bottom: 8px;
-              padding: 0 3px;
-            }
+        .name {
+          font-weight: bold;
+          margin-bottom: 15px;
+          font-size: 1.3rem;
+          text-transform: capitalize;
+          cursor: pointer;
+          color: #f3f3f3;
+          background-color: var(--accent);
+          padding: 5px 7px;
+          border-radius: 4px;
+          width: 100%;
         }
-     }
+
+        p {
+          cursor: default;
+          margin-bottom: 8px;
+          padding: 0 3px;
+        }
+      }
+    }
   }
 }
 
@@ -137,7 +141,7 @@ footer {
       }
     }
   }
-} 
+}
 
 .legal {
   font-size: 0.8rem;

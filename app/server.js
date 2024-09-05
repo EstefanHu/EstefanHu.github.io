@@ -19,6 +19,10 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "text/css" });
       file = fs.readFileSync("../styles/index.css");
       break;
+    case "/styles/rsm.css":
+      res.writeHead(200, { "Content-Type": "text/css" });
+      file = fs.readFileSync("../styles/rsm.css");
+      break;
     case "/rsm":
       res.writeHead(200, { "Content-Type": "text/html" });
       file = fs.readFileSync("../rsm.html");
