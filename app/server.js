@@ -9,19 +9,23 @@ const server = http.createServer((req, res) => {
   switch (req.url) {
     case "/styles/global.css":
       res.writeHead(200, { "Content-Type": "text/css" });
-      file = fs.readFileSync("./styles/global.css");
+      file = fs.readFileSync("../styles/global.css");
+      break;
+    case "/styles/layout.css":
+      res.writeHead(200, { "Content-Type": "text/css" });
+      file = fs.readFileSync("../styles/layout.css");
       break;
     case "/styles/index.css":
       res.writeHead(200, { "Content-Type": "text/css" });
-      file = fs.readFileSync("./styles/index.css");
+      file = fs.readFileSync("../styles/index.css");
       break;
     case "/rsm":
       res.writeHead(200, { "Content-Type": "text/html" });
-      file = fs.readFileSync("./rsm.html");
+      file = fs.readFileSync("../rsm.html");
       break;
     default:
       res.writeHead(200, { "Content-Type": "text/html" });
-      file = fs.readFileSync("./index.html");
+      file = fs.readFileSync("../index.html");
   }
   res.write(file);
   res.end();
