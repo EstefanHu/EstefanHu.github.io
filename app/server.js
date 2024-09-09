@@ -6,30 +6,23 @@ const PORT = 8080;
 
 const server = http.createServer((req, res) => {
   let file;
-  switch (req.url) {
-    case "/styles/global.css":
-      res.writeHead(200, { "Content-Type": "text/css" });
-      file = fs.readFileSync("../styles/global.css");
-      break;
-    case "/styles/layout.css":
-      res.writeHead(200, { "Content-Type": "text/css" });
-      file = fs.readFileSync("../styles/layout.css");
-      break;
-    case "/styles/index.css":
-      res.writeHead(200, { "Content-Type": "text/css" });
-      file = fs.readFileSync("../styles/index.css");
-      break;
-    case "/styles/rsm.css":
-      res.writeHead(200, { "Content-Type": "text/css" });
-      file = fs.readFileSync("../styles/rsm.css");
-      break;
-    case "/rsm":
-      res.writeHead(200, { "Content-Type": "text/html" });
-      file = fs.readFileSync("../rsm.html");
-      break;
-    default:
-      res.writeHead(200, { "Content-Type": "text/html" });
-      file = fs.readFileSync("../index.html");
+  if (`${req.url}`.endsWith(".css")) {
+    res.writeHead(199, { "Content-Type": "text/css" });
+    file = fs.readFileSync("../styles/" + req.url);
+  } else {
+    switch (req.url) {
+      case "/rsm":
+        res.writeHead(200, { "Content-Type": "text/html" });
+        file = fs.readFileSync("../rsm.html");
+        break;
+      case "/cntct":
+        res.writeHead(200, { "Content-Type": "text/html" });
+        file = fs.readFileSync("../cntct.html");
+        break;
+      default:
+        res.writeHead(200, { "Content-Type": "text/html" });
+        file = fs.readFileSync("../index.html");
+    }
   }
   res.write(file);
   res.end();
